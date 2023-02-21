@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <link rel="preload" as="image" href="res/aldrin.png"/>
+  <link rel="preload" as="image" href="res/launch.png"/>
+  <link rel="preload" as="image" href="res/rover.png"/>
+  <link rel="preload" as="image" href="res/spacecenter.png"/>
+  <link rel="preload" as="image" href="res/zerog.png"/>
+  <link rel="preload" as="image" href="res/fitness.png"/>
+  <link rel="preload" as="image" href="res/recovery.png"/>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"/>
+  <link id="mainStylesheet" rel="stylesheet" href="styles/main.css"/>
+  <link rel="icon" href="res/favicon.png"/>
+
+  <title>Astrosphere.com</title>
+</head>
+
+<body>
+  <div id="stickyHeader">
+    <!--LOGO-->
+    <div>
+      <p id="headerLogo" onclick="window.open('index.html','_self')">
+        <img src="res/logowhite.png" />Astrosphere
+      </p>
+    </div>
+
+    <!--NAV ITEMS-->
+    <div style="display: grid; align-items: center">
+      <div>
+        <p class="pageLink" onclick="window.open('technologies.html','_self')">
+          TECHNOLOGIES
+        </p>
+        <p class="pageLink" onclick="window.open('pricing.html','_self')">
+          PRICING
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--MOBILE HAMBURGER MENU-->
+  <div id="mobileNavbar">
+    <img src="res/logowhite.png" onclick="window.open('index.html','_self')" />
+    <img id="burgerIcon" src="res/menu.svg" onclick="toggleBurgerMenu()" />
+  </div>
+
+  <div id="burgerPopup">
+    <p class="pageLink" onclick="window.open('technologies.html','_self')">
+      Technologies
+    </p>
+    <p class="pageLink" onclick="window.open('pricing.html','_self')">
+      Pricing
+    </p>
+  </div>
+  <br/><br/>
+
+
+  <div id="desktopHeader">
+    <!--MAIN PAGE TITLE-->
+    <h1 id="sloganHeader" class="bigHeader">
+      <span class="blueGradientText">Paving the way for</span> <br/>
+      <span class="blueGradientText">modern space tourism</span>
+    </h1>
+
+    <!--MAIN PAGE SUBTITLE-->
+    <h2 id="sloganSub">
+      One <span style="font-weight: 600">giant leap</span> at a time.
+    </h2>
+  </div>
+
+
+  <!--EARTH IMAGE-->
+  <img id="parallaxEarth" src="res/earth.png" />
+
+
+  <!--MOBILE VERSION OF EARTH-->
+  <div id="mobileHeader">
+    <br/><br/><br/>
+    <h1>
+      <span class="blueGradientText">Paving the way for</span><br /><span class="blueGradientText">modern space
+        tourism.</span>
+    </h1>
+    <p>One <span style="font-weight: 600">giant leap</span> at a time.</p>
+    <img id="mobileEarth" src="res/smallearth.png" />
+  </div>
+
+
+  <!--GAP-->
+  <div class="bigGap"></div>
+
+
+  <!--1st CONTAINER-->
+  <div class="imageBlurb grayBox">
+    <div>
+      <img id="blurbImage" />
+    </div>
+
+    <div class="infoSection">
+      <h1 class="subHeader">
+        WE MAKE <span id="typewrite" style="color: rgb(160 100 255)"></span>
+      </h1>
+      <p>
+        No longer is space travel limited to heavily funded government
+        expeditions. Partnering with NASA, The Astrosphere 24-month Space
+        Program provides you with the knowledge and resources needed to shape
+        you into a fully-fledged astronaut. Our program covers all areas of
+        space travel, from on-ground planning and preparation to in-space
+        exercise and nutrition. Those who finish the program are granted with
+        official astronaut recognition from NASA and an all-expenses-paid
+        3-month voyage (6-months for
+        <span onclick="window.open('pricing.html','_self')" style="font-weight: 600; cursor: pointer"
+          class="blueGradientText">Commander Plan Members</span>) to the International Space Station.
+      </p>
+    </div>
+  </div>
+
+
+  <!--GAP-->
+  <div class="bigGap"></div>
+
+
+  <!--PRELOAD IMAGES-->
+  <div style="display: none">
+    <img src="res/aldrin.png" />
+    <img src="res/launch.png" />
+    <img src="res/rover.png" />
+
+    <img src="res/spacecenter.png" />
+    <img src="res/zerog.png" />
+    <img src="res/fitness.png" />
+    <img src="res/recovery.png" />
+  </div>
+
+
+  <!--WE'RE WITH YOU-->
+  <h1 class="subHeader" style="text-align: center">WE'RE WITH YOU</h1>
+  <h2 class="gradientSub">
+    <span class="blueGradientText">Every <i>small step </i>of the way.</span>
+  </h2>
+  <br/><br/><br/>
+
+
+  <!--2nd CONTAINER-->
+  <div id="roadmapSlide" class="grayBox">
+    <div id="slideContent">
+      <img id="rmSlideImage" />
+
+      <div style="display: flex; justify-content: space-between">
+        <button class="slideButton" style="margin-left: 0px" onclick="prevRmSlide()">
+          <img class="slideButtonImg" src="res/leftarrow.svg" />
+        </button>
+        <div>
+          <h3 id="rmSlideHeader"></h3>
+          <p id="rmSlideSub"></p>
+        </div>
+        <button class="slideButton" style="margin-right: 0px" onclick="nextRmSlide()">
+          <img class="slideButtonImg" src="res/rightarrow.svg" />
+        </button>
+      </div>
+    </div>
+
+    <div id="rmDotContainer"><span class="rmSideDot"></span></div>
+  </div>
+  <br/><br/><br/>
+
+
+  <!--FOOTER-->
+  <div id="footer">
+    <p>© 2023 Astrosphere, Inc.</p>
+    <a href="https://github.com/rishabhxshukla/Astrosphere" target="_blank">
+      <img src="res/github-mark-white.png">
+    </a>
+  </div>
+  <br/>
+
+
+  <!--SCRIPTS-->
+  <script src="scripts/effects/fade.js"></script>
+  <script src="scripts/effects/circlepath.js"></script>
+  <script src="scripts/effects/typewriter.js"></script>
+  <script src="scripts/effects/parallax.js"></script>
+  <script src="scripts/page-system/page-system.js"></script>
+  <script src="scripts/roadmap/roadmap.js"></script>
+  <script src="scripts/mobile/mobile.js"></script>
+</body>
+
+</html>

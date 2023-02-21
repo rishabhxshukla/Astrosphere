@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" style="
+    background: linear-gradient(black, rgb(27 20 56));
+    background-attachment: fixed;
+    background-color: black;"
+>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+
+    <link id="mainStylesheet" rel="stylesheet" href="styles/main.css"/>
+    <link rel="icon" href="res/favicon.png"/>
+
+    <title>Pricing | Astrosphere</title>
+</head>
+
+<body>
+    <div id="stickyHeader">
+        <!--LOGO-->
+        <div>
+            <p id="headerLogo" onclick="window.open('index.html','_self')">
+                <img src="res/logowhite.png" />Astrosphere
+            </p>
+        </div>
+
+        <!--NAV ITEMS-->
+        <div style="display: grid; align-items: center">
+            <div>
+                <p class="pageLink" onclick="window.open('technologies.html','_self')">
+                    TECHNOLOGIES
+                </p>
+                <p class="pageLink" onclick="window.open('pricing.html','_self')">
+                    PRICING
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--MOBILE HAMBURGER MENU-->
+    <div id="mobileNavbar">
+        <img src="res/logowhite.png" onclick="window.open('index.html','_self')" />
+        <img id="burgerIcon" src="res/menu.svg" onclick="toggleBurgerMenu()" />
+    </div>
+
+    <div id="burgerPopup">
+        <p class="pageLink" onclick="window.open('technologies.html','_self')">
+            Technologies
+        </p>
+        <p class="pageLink" onclick="window.open('pricing.html','_self')">
+            Pricing
+        </p>
+    </div>
+
+
+    <!--EARTH IMAGE-->
+    <img id="parallaxEarth" src="res/earth.png" style="position: fixed" />
+
+
+    <div class="container">
+        <!--MAIN PAGE TITLE-->
+        <h1 class="subHeader">READY TO LAUNCH ?</h1>
+
+        <!--MAIN PAGE SUBTITLE-->
+        <h2 class="gradientSub">
+            <span class="blueGradientText">Take your first <i>small step</i> into your space travel dreams.</span>
+        </h2>
+        <br />
+
+
+        <!--PRICE CONTAINERS-->
+        <div class="price-row">
+
+            <!--EXPLORER-->
+            <div id="expPriceOpt" class="price-col grayBox">
+                <div>
+                    <p class="littleLogo">Astrosphere</p>
+                    <h2>EXPLORER</h2>
+                </div>
+
+                <h3>₹4,999</h3>
+                <p>• 12 month intro training course</p>
+                <p>• Full zero-gravity training</p>
+                <p>• Physical training and education</p>
+                <p>• Official NASA Astronaut recognition</p>
+                <p>• All expenses paid, 3 month voyage to ISS</p>
+                <button onclick="alert('Thank you for purchasing...')">
+                    PURCHASE
+                </button>
+            </div>
+
+            <!--DARTH VADER-->
+            <div id="comPriceOpt" class="price-col grayBox">
+                <div>
+                    <p class="littleLogo">Astrosphere</p>
+                    <h2>DARTH VADER</h2>
+                </div>
+                <h3>₹9,999</h3>
+                <p>• All expenses paid, 6 month voyage into deep space</p>
+                <p>• Opportunity to participate in space research</p>
+                <p>• Physical training and education</p>
+                <p>• Specialized training for extra-vehicular activities</p>
+                <button onclick="alert('Thank you for purchasing...')">
+                    PURCHASE
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!--GAP-->
+    <div class="bigGap"></div>
+
+
+    <!--DON'T TAKE OUR WORD FOR IT-->
+    <h1 class="subHeader" style="text-align: center">
+        DON'T TAKE OUR WORD FOR IT
+    </h1>
+    <h2 class="gradientSub">
+        <span class="blueGradientText">Hear what our customers think.</span>
+    </h2>
+    <br/>
+
+
+    <!--TESTIMONIAL 1-->
+    <div class="testimonial grayBox">
+        <p>
+            <span>❝</span><br/>I can say without a doubt that the Astrosphere
+            program has changed my life. The information and training was thorough
+            and interactive and landed me a job at NASA.
+        </p>
+        <p style="text-align: right"><span>❞</span></p>
+
+        <div style="display: flex">
+            <div><img src="res/astro1.png" /></div>
+            <div class="testimonialCite">
+                <p class="testimonialName">Kariuki Adebola</p>
+                <p>NASA Pilot Astronaut @ Washingon, DC</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--CONNECTOR-->
+    <div class="testimonialConnector"></div>
+
+
+    <!--TESTIMONIAL 2-->
+    <div class="testimonial grayBox">
+        <p>
+            <span>❝</span><br />After getting my aerospace degree at MIT, I knew
+            that Astrosphere was the next step in my journey. The program provided
+            me with valuable resources and in-industry expierence that can't be
+            found anywhere else.
+        </p>
+        <p style="text-align: right"><span>❞</span></p>
+
+        <div style="display: flex">
+            <div><img src="res/astro2.png" /></div>
+            <div class="testimonialCite">
+                <p class="testimonialName">Tyrone Devon</p>
+                <p>NASA Aerospace Engineer and Astronaut @ Hampton, VA</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--CONNECTOR-->
+    <div class="testimonialConnector"></div>
+
+
+    <!--TESTIMONIAL 3-->
+    <div class="testimonial grayBox">
+        <p>
+            <span>❝</span><br />Everyday, Astrosphere brings me closer to my dream
+            of being an astronaut. Looking back months ago, I would've have never
+            imagined myself learning the ins and outs of space travel alongside such
+            amazing teachers.
+        </p>
+        <p style="text-align: right"><span>❞</span></p>
+
+        <div style="display: flex">
+            <div><img src="res/astro3.png" /></div>
+            <div class="testimonialCite">
+                <p class="testimonialName">Vivian Carleton</p>
+                <p>Current Astrosphere Trainee @ Houston, TX</p>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/>
+
+
+    <!--FOOTER-->
+    <div id="footer">
+        <p>© 2023 Astrosphere, Inc.</p>
+        <a href="https://github.com/rishabhxshukla/Astrosphere" target="_blank">
+            <img src="res/github-mark-white.png">
+        </a>
+    </div>
+    <br/>
+
+
+    <!--SCRIPTS-->
+    <script src="scripts/mobile/mobile.js"></script>
+    <script src="scripts/effects/fade.js"></script>
+</body>
+
+</html>
